@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Hello',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -18,8 +19,15 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("Casey"),
             backgroundColor: Colors.red,
+            actions: <Widget>[
+              IconButton(onPressed: () {}, icon: Icon(Icons.mail))
+            ],
           ),
-          body: SafeArea(child: Text("ayo belajar")),
+          body: SafeArea(
+              child: Image(
+            image: AssetImage("assets/images/hm.jpg"),
+            height: 180,
+          )),
         ));
   }
 }
