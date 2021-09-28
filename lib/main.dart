@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/fonst_style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,22 +23,30 @@ class MyApp extends StatelessWidget {
           ),
           body: SafeArea(
               child: Container(
-            color: Colors.blue,
-            // margin: EdgeInsets.all(20),
-            margin: EdgeInsets.only(left: 50.0, top: 20),
-            padding: EdgeInsets.all(40),
-            child: Column(
-              children: <Widget>[
-                Image(
-                  image: AssetImage("assets/images/hm.jpg"),
-                  height: 180,
-                ),
-                Text("halo"),
-                Text("halo"),
-                Text("halo")
-              ],
-            ),
-          )),
+                  color: Colors.indigo,
+                  // margin: EdgeInsets.all(20),
+                  margin: EdgeInsets.all(40),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Image(
+                              image: AssetImage("assets/images/hm.jpg"),
+                              height: 180,
+                            ),
+                            Text(
+                              "halo \n hai",
+                              style: mainHeader,
+                              textAlign: TextAlign.start,
+                            ),
+                            Text("halo"),
+                            Padding(padding: EdgeInsets.only(top: 20)),
+                            Text("halo")
+                          ],
+                        ),
+                      ]))),
         ));
   }
 }
